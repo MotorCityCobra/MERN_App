@@ -1,0 +1,22 @@
+export const UPLOAD_PHOTO = 'UPLOAD_PHOTO';
+export const DELETE_PHOTO = 'DELETE_PHOTO';
+export const ALL_PHOTOS = 'ALL_PHOTOS';
+export const FIRST_PHOTOS = 'FIRST_PHOTOS';
+export const GET_ERRORS = 'GET_ERRORS';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
+export const SELECTED_UPLOADER = 'SELECTED_UPLOADER';
+export const MORE_PHOTOS = 'MORE_PHOTOS';
+export const SINGLE_VIEW = 'SINGLE_VIEW';
+export const NULL_PHOTO = 'NULL_PHOTO';
+export const COMMENT_UPLOADER = 'COMMENT_UPLOADER';
+export const INDIV_COMMENTS = 'INDIV_COMMENTS';
+export const DELETE_PHOTO_COMMENTS = 'DELETE_PHOTO_COMMENTS';
+
+export const USER_LOADING = "USER_LOADING";
+export const USER_LOADED = "USER_LOADED";
+export const AUTH_ERROR = "AUTH_ERROR";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAIL = "LOGIN_FAIL";
+export const LOGOUT_SUCCESS = "LOGOUT_SUCCESS";
+export const REGISTER_FAIL = "REGISTER_FAIL";
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
