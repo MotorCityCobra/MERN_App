@@ -35,6 +35,7 @@ app.use('/api/items', require('./routes/api/items'));
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/comments', require('./routes/api/comments'));
+app.use('/api/stripe', require('./routes/api/stripe'));
 
 if (process.env.NODE_ENV === 'production') {
   // Set static folder

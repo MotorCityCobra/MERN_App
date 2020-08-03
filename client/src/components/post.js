@@ -46,6 +46,7 @@ class Post extends React.Component {
       return (
   <div>
   <Navbar/>
+
   <div className="card card-body mb-3">
     <img src={`/api/items/image/${this.props.array.filename}`}
     alt="" className="post-imaage"/>

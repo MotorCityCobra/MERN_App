@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+.btn-danger {
+  max-width: 400px;
+}
 .imaage {
   width: 100%;
 }
