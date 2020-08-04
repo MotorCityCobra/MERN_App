@@ -9,6 +9,7 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm install && npm install --prefix client && npm run build --prefix client",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "",
@@ -33,6 +34,7 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "serve-index": "^1.9.1",
+    "stripe": "^8.81.0",
     "uuid": "^3.4.0"
   },
   "devDependencies": {
