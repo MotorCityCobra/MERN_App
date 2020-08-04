@@ -11,7 +11,6 @@ import LoginModal from '../auth/LoginModal'
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import StripePayment from './StripePayment'
 
 class Home extends React.Component {
   constructor(props) {
@@ -73,8 +72,6 @@ class Home extends React.Component {
 
         <div className="col-md-6 m-auto">
           <h1 className="text-center display-4 my-4">MERN, Redux <br/>Photo Stream</h1>
-
-          <StripePayment/>
 
           { this.props.isAuthenticated ?
           <form action="/api/items/upload" method="POST" encType="multipart/form-data">
