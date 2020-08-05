@@ -99,7 +99,7 @@ router.post('/', (req, res) => {
 // @route GET api/auth/user
 // @desc GET user data
 // @access Private
-router.get('/user', auth, (req, res) => {
+router.get('/users', auth, (req, res) => {
   User.findById(req.user.id)
     .select('-password')
     .then(user => res.json(user));
