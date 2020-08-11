@@ -78,7 +78,7 @@ class AppNavbar extends Component {
           <Container>
             {/* <NavbarBrand href='/'>ShoppingList</NavbarBrand> */}
             <Link to={'/'} >
-              <h4 className="home-textx" onClick={this.clearPhoto} >Yaga</h4>
+              <h4 className="home-textx" onClick={this.clearPhoto} >New Star</h4>
             </Link>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from "react";
 import { connect } from 'react-redux'
 import { Button, ToastHeader, ToastBody, Toast } from 'reactstrap';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -7,6 +7,10 @@ import { deletePhotoComments } from '../actions/commentActions'
 import Navbar from './navbar'
 import RegisterModal from '../auth/registerModal'
 import LoginModal from '../auth/LoginModal'
+
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import CheckoutForm from "./CheckoutForm.jsx";
 
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { Link } from 'react-router-dom'
@@ -55,6 +59,7 @@ class Home extends React.Component {
   }
   render() {
     //console.log(this.props)
+    const promise = loadStripe("pk_test_Egzk9dR5UgqqBUZbuYh8PPGl00qSk4jnXl");
 
     if (!this.props.arrays) {
       return(
@@ -65,7 +70,6 @@ class Home extends React.Component {
     return (
       <div>
       <Navbar/>
-
       <div className="container">
 
       <div className="row">
@@ -90,6 +94,10 @@ class Home extends React.Component {
           </Toast>
         </div>
           }
+
+        <Elements stripe={promise}>
+          <CheckoutForm />
+        </Elements>
 
 
 
@@ -116,6 +124,7 @@ class Home extends React.Component {
                           >Delete</Button>
                           : null }
                         </form>
+
                       </div>
                     </CSSTransition>
                   </TransitionGroup>
@@ -124,6 +133,7 @@ class Home extends React.Component {
           </div>
         </div>
       </div>
+
       </div>
     );
   }}

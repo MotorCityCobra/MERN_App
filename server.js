@@ -15,17 +15,13 @@ app.use(function (req, res, next) {
 
   // Website you wish to allow to connect
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-
   // Request methods you wish to allow
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-
   // Request headers you wish to allow
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-
   // Set to true if you need the website to include cookies in the requests sent
   // to the API (e.g. in case you use sessions)
   res.setHeader('Access-Control-Allow-Credentials', true);
-
   // Pass to next layer of middleware
   next();
 });
@@ -35,7 +31,7 @@ app.use('/api/items', require('./routes/api/items'));
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/comments', require('./routes/api/comments'));
-// app.use('/api/stripe', require('./routes/api/stripe'));
+app.use('/api/estripo', require('./routes/api/estripo'));
 
 if (process.env.NODE_ENV === 'production') {
   // Set static folder
@@ -47,5 +43,4 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const port = process.env.PORT || 5002;
-
 app.listen(port, () => console.log(`Server started on port ${port}`));
